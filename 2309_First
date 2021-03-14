@@ -1,0 +1,82 @@
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int getMinIndexInRange(int* data, int n, int begin, int end)
+{
+  int minIndex = begin;
+  int minValue = data[begin];
+
+  for (int i = begin; i < n; i++)
+  {
+    if (minValue > data[i])
+    {
+      minValue = data[i];
+      minIndex = i;
+    }
+  }
+  return minIndex;
+}
+
+void selectionSort(int* data, int n)
+{
+  for (int i = 0; i < n-1; i++)
+  {
+    int minIndex = getMinIndexInRange(data, n, i, n-1);
+    int temp = 0;
+
+    temp = data[minIndex];
+    data[minIndex] = data[i];
+    data[i] = temp;
+  }
+}
+
+int main()
+{
+  int tallSum = -100;
+  int* tall = NULL;
+  int* tall2 = NULL;
+
+  tall = new int[9];
+  tall2 = new int[7];
+
+  for (int i = 0; i < 9; i++)
+  {
+    scanf("%d", &tall[i]);
+    tallSum += tall[i];
+  }
+
+  for (int i = 0; i < 9; i++) {
+    for (int j = i+1; j < 9; j++) {
+      if(tall[i] + tall[j] == tallSum) {
+        tall[i] = 0; tall[j] = 0;
+        goto EXIT;
+      }
+    }
+  }
+
+EXIT:
+  int k = 0;
+  int l = 0;
+  while (k < 9)
+  {
+    if (tall[k] != 0)
+    {
+      tall2[l] = tall[k];
+      l++;
+    }
+    k++;
+  }
+
+  selectionSort(tall2, 7);
+
+  for (int i = 0; i < 7; i++)
+  {
+    cout << tall2[i] << endl;
+  }
+
+  delete[] tall;
+  delete[] tall2;
+
+  return 0;
+}
