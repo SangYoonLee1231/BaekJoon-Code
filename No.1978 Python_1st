@@ -1,5 +1,6 @@
 # https://www.acmicpc.net/problem/1978
-# 소수 찾기
+# 소수 찾기 (수학, 정수론, 소수 판정, 에라토스테네스의 체) / 실버4
+# 에라토스테네스의 체는 이용X
 
 def isPrime(n):
   if n == 1: return 0
