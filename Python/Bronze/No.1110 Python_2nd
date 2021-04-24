@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/1110
+# 더하기 사이클 (수학, 구현, 문자열) / 브론즈1
 # 풀이2: 정수 자료형으로만 풀이
 
 def cycle(n):
