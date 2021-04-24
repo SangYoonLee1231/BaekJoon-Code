@@ -1,3 +1,6 @@
+# https://www.acmicpc.net/problem/1110
+# 풀이1: 문자열로 변환하여 풀이
+
 def cycle(n):
   count = 0
 
