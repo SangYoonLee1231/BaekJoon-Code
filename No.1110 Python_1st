@@ -1,0 +1,19 @@
+def cycle(n):
+  count = 0
+
+  if len(n) == 1:
+    n = '0' + n
+
+  first_num = n
+  new_num = ""
+
+  while not first_num == new_num:
+    count += 1
+    if count > 1:
+      n = new_num
+    sum_num = str(int(n[0]) + int(n[1]))
+    new_num = n[-1] + sum_num[-1]
+  return count
+
+n = input()
+print(cycle(n))
