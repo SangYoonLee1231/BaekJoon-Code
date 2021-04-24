@@ -1,4 +1,5 @@
 # https://www.acmicpc.net/problem/1110
+# 더하기 사이클 (수학, 구현, 문자열) / 브론즈1
 # 풀이1: 문자열로 변환하여 풀이
 
 def cycle(n):
