@@ -1,2 +1,3 @@
-# BaekJoon-Code
+## BaekJoon-Code
 백준 온라인 저지 문제 풀이 코드
+(브론즈1이상 문제들의 코드만 저장)
